@@ -2,47 +2,61 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="description" content="Homework 1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Homework #7">
         <title>Web Studio</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
         <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/tablet.css">
+        <link rel="stylesheet" href="./css/desktop.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Page header -->
-        <header class="main-header-menu">
-            <div class="container main-header-container">
-                <nav class="nav-menu">
-                    <a class="logo" href="/goit-markup-hw-01/"><span>WEB</span>STUDIO</a>
-                    <ul class="nav-list">
-                        <li class="nav-list-item active">
-                            <a class="nav-list-link" href="./index.html">Studio</a>
+        <header class="header">
+            <div class="container header-container">
+                <nav class="header-navigation">
+                    <a class="header-logo link" href="/goit-markup-hw-07/">
+                        <span class="header-logo-text">WEB</span>STUDIO</a>
+                    <ul class="header-nav-list list">
+                        <li class="header-nav-item active">
+                            <a class="header-nav-link link" href="./index.html">Studio</a>
                         </li>
-                        <li class="nav-list-item">
-                            <a class="nav-list-link" href="./portfolio.html">Portfolio</a>
+                        <li class="header-nav-item">
+                            <a class="header-nav-link link" href="./portfolio.html">Portfolio</a>
                         </li>
-                        <li class="nav-list-item">
-                            <a class="nav-list-link" href="/contacts">Contacts</a>
+                        <li class="header-nav-item">
+                            <a class="header-nav-link link" href="/contacts">Contacts</a>
                         </li>
                     </ul>
                 </nav>
                 
-                <address class="address">
-                    <ul class="address-list">
-                        <li class="address-list-item"><a class="address-list-link"
+                <address class="header-address">
+                    <ul class="header-address-list list">
+                        <li class="header-address-item"><a class="header-address-link link"
                                 href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li class="address-list-item"><a class="address-list-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                        <li class="header-address-item"><a class="header-address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
                     </ul>
                 </address>
+
+                <button 
+                    class="menu-toggle js-open-menu" 
+                    aria-expanded="false" 
+                    aria-controls="mobile-menu">
+                    <svg class="menu-icon">
+                        <use href="images/icons.svg#icon-hamburger-menu" />
+                    </svg>
+                </button>
+
             </div>
         </header>
 
         <!-- Unique page content -->
         <main>
             <section class="hero">
-                <div class="container section-container">
+                <div class="container hero-container">
                     <h1 class="hero-title">Effective Solutions <br> for Your Business</h1>
                     <button class="hero-cta" type="button" data-modal-open>Order Service</button>
                 </div>
@@ -50,12 +64,12 @@
 
             <section class="features">
                 <div class="container section-container">
-                    <h2 class="section-title-header" hidden>Features</h2>
-                    <ul class="features-list">
+                    <h2 class="feature-title section-header" hidden>Features</h2>
+                    <ul class="features-list list">
                         <li class="features-list-item">
                             <div class="features-list-item-content">
-                                <a href="#" class="features-list-item-icon icon icon-antenna">
-                                        <svg>
+                                <a href="#" class="features-list-item-link icon icon-antenna">
+                                        <svg class="features-list-item-icon">
                                             <use href="images/icons.svg#icon-antenna" />
                                         </svg>
                                 </a>
@@ -66,8 +80,8 @@
                         </li>
                         <li class="features-list-item">
                             <div class="features-list-item-content">
-                                <a href="#" class="features-list-item-icon icon icon-clock">
-                                        <svg>
+                                <a href="#" class="features-list-item-link icon icon-clock">
+                                        <svg class="features-list-item-icon">
                                             <use href="images/icons.svg#icon-clock" />
                                         </svg>
                                 </a>
@@ -78,8 +92,8 @@
                         </li>
                         <li class="features-list-item">
                             <div class="features-list-item-content">
-                                <a href="#" class="features-list-item-icon icon icon-diagram">
-                                        <svg>
+                                <a href="#" class="features-list-item-link icon icon-diagram">
+                                        <svg class="features-list-item-icon">
                                             <use href="images/icons.svg#icon-diagram" />
                                         </svg>
                                 </a>
@@ -90,8 +104,8 @@
                         </li>
                         <li class="features-list-item">
                             <div class="features-list-item-content">
-                                <a href="#" class="features-list-item-icon icon icon-astronaut">
-                                        <svg>
+                                <a href="#" class="features-list-item-link icon icon-astronaut">
+                                        <svg class="features-list-item-icon">
                                             <use href="images/icons.svg#icon-astronaut" />
                                         </svg>
                                 </a>
@@ -106,7 +120,7 @@
 
             <section class="service">
                 <div class="container section-container">
-                    <h2 class="section-title-header">What are we doing</h2>
+                    <h2 class="service-title section-header">What are we doing</h2>
                     <ul class="service-list">
                         <li class="service-list-items">
                             <img class="service-list-img" src="./images/image-01.jpg" alt="computer monitor" width="360" height="300">
@@ -123,7 +137,7 @@
         
             <section class="team">
                 <div class="container section-container">
-                    <h2 class="section-title-header">Our Team</h2>
+                    <h2 class="team-title section-header">Our Team</h2>
                     <ul class="team-list">
                         <li class="team-list-items">
                             <img class="team-list-img" src="./images/mark-guerrero.jpg" alt="Mark Guerrero" width="264" height="260">
@@ -279,46 +293,46 @@
             
             <section class="customers">
                 <div class="container section-container">
-                    <h2 class="section-title-header">Customers</h2>
-                    <ul class="customer-logo">
-                        <li class="customer-logo-items">
-                            <a href="#" class="customer-logo-link icon-client-1">
-                                <svg class="customer-logo-icon">
+                    <h2 class="customers-title section-header">Customers</h2>
+                    <ul class="customers-logo">
+                        <li class="customers-logo-items">
+                            <a href="#" class="customers-logo-link icon-client-1">
+                                <svg class="customers-logo-icon">
                                     <use href="images/icons.svg#icon-client-1" />
                                 </svg>
                             </a>
                         </li>
-                        <li class="customer-logo-items">
-                            <a href="#" class="customer-logo-link icon-client-2">
-                                <svg class="customer-logo-icon">
+                        <li class="customers-logo-items">
+                            <a href="#" class="customers-logo-link icon-client-2">
+                                <svg class="customers-logo-icon">
                                     <use href="images/icons.svg#icon-client-2" />
                                 </svg>
                             </a>
                         </li>
-                        <li class="customer-logo-items">
-                            <a href="#" class="customer-logo-link icon-client-3">
-                                <svg class="customer-logo-icon">
+                        <li class="customers-logo-items">
+                            <a href="#" class="customers-logo-link icon-client-3">
+                                <svg class="customers-logo-icon">
                                     <use href="images/icons.svg#icon-client-3" />
                                 </svg>
                             </a>
                         </li>
-                        <li class="customer-logo-items">
-                            <a href="#" class="customer-logo-link icon-client-4">
-                                <svg class="customer-logo-icon">
+                        <li class="customers-logo-items">
+                            <a href="#" class="customers-logo-link icon-client-4">
+                                <svg class="customers-logo-icon">
                                     <use href="images/icons.svg#icon-client-4" />
                                 </svg>
                             </a>
                         </li>
-                        <li class="customer-logo-items">
-                            <a href="#" class="customer-logo-link icon-client-5">
-                                <svg class="customer-logo-icon">
+                        <li class="customers-logo-items">
+                            <a href="#" class="customers-logo-link icon-client-5">
+                                <svg class="customers-logo-icon">
                                     <use href="images/icons.svg#icon-client-5" />
                                 </svg>
                             </a>
                         </li>
-                        <li class="customer-logo-items">
-                            <a href="#" class="customer-logo-link icon-client-6">
-                                <svg class="customer-logo-icon">
+                        <li class="customers-logo-items">
+                            <a href="#" class="customers-logo-link icon-client-6">
+                                <svg class="customers-logo-icon">
                                     <use href="images/icons.svg#icon-client-6" />
                                 </svg>
                             </a>
@@ -332,7 +346,7 @@
         <footer class="section-footer">
             <div class="container footer-container">
                 <div class="footer-container-logo">
-                    <a class="logo" href="/goit-markup-hw-01/"><span>WEB</span>STUDIO</a>
+                    <a class="logo" href="/goit-markup-hw-07/"><span>WEB</span>STUDIO</a>
                     <p class="footer-description">Increase the flow of customers and <br>sales for your business with digital <br>marketing
                         & growth solutions.</p>
                 </div>
@@ -449,6 +463,7 @@
         </div>
 
         <script src="./js/modal.js"></script>
+        <script src="./js/mobile-menu.js"></script>
 
     </body>
 </html>
