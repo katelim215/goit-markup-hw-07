@@ -35,14 +35,28 @@
                 
                 <address class="header-address">
                     <ul class="header-address-list list">
-                        <li class="header-address-item"><a class="header-address-link link"
-                                href="mailto:info@devstudio.com">info@devstudio.com</a></li>
-                        <li class="header-address-item"><a class="header-address-link link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
+                        <li class="header-address-item">
+                            <a 
+                                href="mailto:info@devstudio.com" 
+                                class="header-address-link link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                    info@devstudio.com
+                            </a>
+                        </li>
+                        <li class="header-address-item">
+                            <a 
+                                href="tel:+110001111111" 
+                                class="header-address-link link"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                    +11 (000) 111-11-11
+                            </a>
+                        </li>
                     </ul>
                 </address>
 
-                <button 
-                    class="menu-toggle js-open-menu" 
+                <button class="menu-toggle js-open-menu" 
                     aria-expanded="false" 
                     aria-controls="mobile-menu">
                     <svg class="menu-icon">
@@ -50,6 +64,108 @@
                     </svg>
                 </button>
 
+                <div class="menu-container js-menu-container" id="mobile-menu">
+                    <button class="menu-close-btn js-close-menu">
+                        <svg class="menu-close-icon">
+                            <use href="./images/icons.svg#icon-close-black-18dp-2-1" />
+                        </svg>
+                    </button>
+                    <ul class="mobile-menu-list list">
+                        <li class="mobile-menu-item">
+                            <a 
+                                href="./index.html" 
+                                class="mobile-menu-link link">
+                                    Studio
+                            </a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a 
+                                href="./portfolio.html" 
+                                class="mobile-menu-link link">
+                                    Portfolio
+                            </a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a 
+                                href="./contacts" 
+                                class="mobile-menu-link link">
+                                    Contacts
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mobile-menu-contact">
+                        <address class="mobile-menu-address">
+                            <ul class="mobile-address-list">
+                                <li class="mobile-address-item">
+                                    <a 
+                                        href="tel:+110001111111" 
+                                        class="mobile-address-link" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer">
+                                            +11 (000) 111-11-11
+                                    </a>
+                                </li>
+                                <li class="mobile-address-item">
+                                    <a 
+                                        href="mailto:info@devstudio.com" 
+                                        class="mobile-address-link" 
+                                        target="_blank" 
+                                        rel="noopener noreferrer">
+                                            info@devstudio.com
+                                    </a>
+                                </li>
+                            </ul>
+                        </address>
+                        <div class="mobile-menu-socials">
+                            <ul class="mobile-socials-list">
+                                <li class="mobile-social-item list">
+                                    <a 
+                                        href="www.instagram.com" 
+                                        class="mobile-social-link link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                            <svg class="mobile-socials-icon">
+                                                <use href="./images/icons.svg#icon-instagram" />
+                                            </svg>
+                                    </a>
+                                </li>
+                                <li class="mobile-social-item list">
+                                    <a 
+                                        href="www.twitter.com" 
+                                        class="mobile-social-link link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                            <svg class="mobile-socials-icon">
+                                                <use href="./images/icons.svg#icon-twitter" />
+                                            </svg>
+                                    </a>
+                                </li>
+                                <li class="mobile-social-item list">
+                                    <a 
+                                        href="www.linkedin.com" 
+                                        class="mobile-social-link link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                            <svg class="mobile-socials-icon">
+                                                <use href="./images/icons.svg#icon-linkedin" />
+                                            </svg>
+                                    </a>
+                                </li>
+                                <li class="mobile-social-item list">
+                                    <a 
+                                        href="www.facebook.com" 
+                                        class="mobile-social-link link"
+                                        target="_blank"
+                                        rel="noopener noreferrer">
+                                            <svg class="mobile-socials-icon">
+                                                <use href="./images/icons.svg#icon-facebook" />
+                                            </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </header>
 
@@ -123,13 +239,31 @@
                     <h2 class="service-title section-header">What are we doing</h2>
                     <ul class="service-list">
                         <li class="service-list-items">
-                            <img class="service-list-img" src="./images/image-01.jpg" alt="computer monitor" width="360" height="300">
+                            <img 
+                                class="service-list-img" 
+                                srcset="./images/service/service-img-1.jpg 1x, ./images/service/service-img-1@2x.jpg 2x"
+                                src="./images/service/service-img-1.jpg" 
+                                alt="computer monitor" 
+                                width="360" 
+                                height="300">
                         </li>
                         <li class="service-list-items">
-                            <img class="service-list-img" src="./images/image-02.jpg" alt="four cellphone screens" width="360" height="300">
+                            <img 
+                                class="service-list-img" 
+                                srcset="./images/service/service-img-2.jpg 1x, ./images/service/service-img-2@2x.jpg 2x"
+                                src="./images/image/service/service-img-2.jpg"
+                                alt="four cellphone screens" 
+                                width="360" 
+                                height="300">
                         </li>
                         <li class="service-list-items">
-                            <img class="service-list-img" src="./images/image-03.jpg" alt="cellphone with a laptop" width="360" height="300">
+                            <img 
+                                class="service-list-img" 
+                                srcset="./images/service/service-img-3.jpg 1x, ./images/service/service-img-3@2x.jpg 2x"
+                                src="./images/image-/service/service-img-3.jpg"
+                                alt="cellphone with a laptop" 
+                                width="360" 
+                                height="300">
                         </li>
                     </ul>
                 </div>
@@ -140,7 +274,14 @@
                     <h2 class="team-title section-header">Our Team</h2>
                     <ul class="team-list">
                         <li class="team-list-items">
-                            <img class="team-list-img" src="./images/mark-guerrero.jpg" alt="Mark Guerrero" width="264" height="260">
+                            <img 
+                                class="team-list-img"
+                                srcset="./images/team/team-card-1.jpg 1x, ./images/team/team-card-1@2x.jpg 2x" 
+                                src="./images/team/team-card-1.jpg" 
+                                alt="Mark Guerrero" 
+                                width="264" 
+                                height="260"
+                            >
                             <div class="team-description">
                                 <h3 class="team-list-name">Mark Guerrero</h3>
                                 <p class="team-list-position">Product Designer</p>
@@ -177,7 +318,14 @@
                             </div>
                         </li>
                         <li class="team-list-items">
-                            <img class="team-list-img" src="./images/tom-ford.jpg" alt="Tom Ford" width="264" height="260">
+                            <img 
+                                class="team-list-img" 
+                                srcset="./images/team/team-card-2.jpg 1x, ./images/team/team-card-2@2x.jpg 2x" 
+                                src="./images/team/team-card-2.jpg" 
+                                alt="Tom Ford" 
+                                width="264" 
+                                height="260"
+                            >
                             <div class="team-description">
                                 <h3 class="team-list-name">Tom Ford</h3>
                                 <p class="team-list-position">Frontend Developer</p>
@@ -214,7 +362,14 @@
                             </div>
                         </li>
                         <li class="team-list-items">
-                            <img class="team-list-img" src="./images/camila-garcia.jpg" alt="Camila Garcia" width="264" height="260">
+                            <img 
+                                class="team-list-img"
+                                srcset="./images/team/team-card-3.jpg 1x, ./images/team/team-card-3@2x.jpg 2x" 
+                                src="./images/team/team-card-3.jpg" 
+                                alt="Camila Garcia" 
+                                width="264" 
+                                height="260"
+                            >
                             <div class="team-description">
                                 <h3 class="team-list-name">Camila Garcia</h3>
                                 <p class="team-list-position">Marketing</p>
@@ -251,7 +406,14 @@
                             </div>
                         </li>
                         <li class="team-list-items">
-                            <img class="team-list-img" src="./images/daniel-wilson.jpg" alt="Daniel Wilson" width="264" height="260">
+                            <img 
+                                class="team-list-img"
+                                srcset="./images/team/team-card-4.jpg 1x, ./images/team/team-card-4@2x.jpg 2x"                                
+                                src="./images/team/team-card-4.jpg"
+                                alt="Daniel Wilson" 
+                                width="264" 
+                                height="260"
+                            >
                             <div class="team-description">
                                 <h3 class="team-list-name">Daniel Wilson</h3>
                                 <p class="team-list-position">UI Designer</p>
