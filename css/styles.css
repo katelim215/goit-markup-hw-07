@@ -32,8 +32,24 @@ img {
     height: auto;
 }
 
+.list {
+    gap: 40px;
+    list-style: none;
+}
+
+.link {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 input, textarea {
     outline: none;
+}
+
+.active {
+    color: var(--ocean);
 }
 
 /* page header */
@@ -77,91 +93,155 @@ input, textarea {
     fill: var(--navyblue);
 }
 
+.menu-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    padding: 48px 40px 40px 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--white);
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 50;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 
+                0px 1px 1px 0px rgba(46, 47, 66, 0.16), 
+                0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+    transform: translateX(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-container.is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.menu-close-btn {
+    display: flex;
+    background-color: var(--cornflower);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    width: 24px;
+    height: 24px;
+    align-items: center;
+    justify-content: center;
+    color: var(--navyblue);
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    cursor: pointer;
+    transition-property: background-color, border-color, fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-close-icon {
+    width: 8px;
+    height: 8px;
+    fill: currentColor;
+}
+
+.menu-close-btn:hover,
+.menu-close-btn:focus {
+    background-color: var(--ocean);
+    border-color: var(--ocean);
+    color: var(--white);
+}
+
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    column-gap: 40px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+    text-transform: capitalize;
+    color: var(--navyblue);
+}
+
+.mobile-menu-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.mobile-address-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-address-link {
+    font-style: normal;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    color: var(--slate);
+}
+
+.highlight {
+    color: var(--iris);
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0.72px;
+}
+
+.mobile-menu-socials {
+    display: flex;
+}
+
+.mobile-socials-list {
+    display: flex;
+    gap: 56px;
+    align-items: center;
+}
+
+.mobile-social-link {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    background-color: var(--iris);
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: bakground-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-social-link:hover,
+.mobile-social-link:focus {
+    background-color: var(--ocean);
+}
+
+.mobile-socials-icon {
+    width: 24px;
+    height: 24px;
+}
+
 .header-navigation {
     display: inline-flex;
     gap: 76px;
 }
 
-.header-nav-link {
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5em;
-    letter-spacing: 0.32px;
-    display: flex;
-    color: var(--navyblue);
-    gap: 40px;
+.header-nav-list {
+    display: none;
 }
 
-.header-nav-item {
-    display: inline-block;
-    position: relative;
-}
-
-.link {
-    list-style: none;
-    text-decoration: none;
-    color: var(--navyblue);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-nav-link::after {
-    content: '';
-    width: 0;
-    height: 4px;
-    background-color: var(--ocean);
-    border-radius: 2px;
-    position: absolute;
-    left: 0;
-    bottom: -25px;
-    transition: width 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-nav-item:hover .header-nav-link,
-.header-nav-item:focus .header-nav-link {
-    color: var(--ocean);
-}
-
-.header-nav-item:hover .header-nav-link::after {
-    width: 100%;
-    color: var(--ocean);
-}
-
-.header-nav-item.active .header-nav-link::after {
-    width: 100%;
-}
-
-.header-nav-item.active .header-nav-link {
-    color: var(--ocean);
-}
-
-.list {
-    display: flex;
-    gap: 40px;
-}
-
-.header-address-link {
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0.32px;
-    font-style: normal;
-}
-
-.header-address-item {
-    display: inline-block;
-}
-
-.header-address-item .header-address-link:hover,
-.header-address-item .header-address-link:focus {
-    color: var(--ocean);
+.header-address {
+    display: none;
 }
 
 .header-container {
-    width: 1128px;
-    padding: 0px 15px;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .container {
@@ -425,24 +505,48 @@ input, textarea {
 .section-footer {
     background: var(--navyblue);
     padding: 100px 0;
+}
+
+.footer-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 72px;
 }
 
 .footer-container-logo {
-    display: inline-flex;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-right: 120px;
+    gap: 17.5px;
+}
+
+.footer-logo {
+    color: var(--cloud);
+    font-family: Raleway;
+    font-size: 18px;
+    line-height: 1.17em;
+    letter-spacing: 0.54px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.footer-logo-text {
+    color: var(--iris);
+    font-family: Raleway;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.54px;
 }
 
 .footer-icons {
-    display: inline-flex;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
+    gap: 16px;
 }
 
 .footer-description {
@@ -467,7 +571,6 @@ input, textarea {
     font-size: 16px;
     letter-spacing: 0.32px;
     font-weight: 500;
-    margin-bottom: 16px;
 }
 
 .footer-link-lists {
@@ -502,11 +605,11 @@ input, textarea {
 }
 
 .subscribe {
-    display: inline-flex;
-    align-items: flex-start;
+    display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: center;
-    margin-left: 80px;
+    gap: 16px;
 }
 
 .footer-subscribe {
@@ -515,11 +618,16 @@ input, textarea {
     font-weight: 500;
     line-height: 24px;
     letter-spacing: 0.32px;
-    margin-bottom: 16px;
+}
+
+.footer-subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .footer-label-input {
-    width: 264px;
+    width: 398px;
     height: 40px;
     padding: 8px 0px 8px 16px;
     border-radius: 4px;
@@ -541,17 +649,17 @@ input, textarea {
 }
 
 .footer-subscribe-btn {
-    display: inline-flex;
+    display: flex;
     width: 165px;
     height: 40px;
     align-items: center;
     justify-content: center;
+    align-self: center;
     background: var(--iris);
     border-radius: 4px;
     border: none;
     color: var(--white);
     gap: 16px;
-    margin-left: 24px;
     padding: 8px 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -570,7 +678,7 @@ input, textarea {
 
 
 .portfolio-buttons {
-    padding-top: 96px;
+    padding: 48px 0;
 }
 
 .portfolio-buttons-cta {
@@ -593,10 +701,11 @@ input, textarea {
 }
 
 .portfolio-buttons-list {
-    list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 24px;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .portfolio-buttons-cta:hover,
@@ -610,7 +719,7 @@ input, textarea {
 }
 
 .portfolio-images {
-    padding: 72px 0 120px;
+    padding-bottom: 48px;
 }
 
 .portfolio-images-title {
@@ -633,15 +742,14 @@ input, textarea {
 }
 
 .portfolio-images-list {
-    list-style: none;
     display: flex;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 48px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    column-gap: 48px;
 }
 
 .portfolio-images-items {
-    width: calc((100% - 48px) / 3);
+    width: 100%;
     border: 1px solid var(--cornflower);
     background: var(--white);
     transition-property: border, box-shadow;
