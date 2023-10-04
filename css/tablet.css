@@ -238,6 +238,7 @@
     .subscribe {
         display: flex;
         align-items: flex-start;
+        margin-left: 115px;
     }
 
     .footer-subscribe-form {

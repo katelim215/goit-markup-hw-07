@@ -340,6 +340,14 @@
         color: var(--cloud);
     }
 
+    .subscribe {
+        margin-left: 0px;
+    }
+
+    .footer-description {
+        width: 264px;
+    }
+
     .portfolio-buttons {
         padding-top: 96px;
     }
